@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6d4aff" />
+  <meta
+    name="description"
+    content="Discover campus workshops, explore new skills, and find your next student event."
+  />
+  <title>CampusConnect | Explore Events</title>
+  <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/" aria-label="CampusConnect home">
+      <span class="brand-icon">C</span>
+      <span>Campus<span class="brand-accent">Connect</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="nav-link active" href="#events">Explore Events</a>
+      <a class="nav-link" href="#how-it-works">How It Works</a>
+    </nav>
+
+    <a class="nav-cta" href="#events">Find a Workshop <span>↗</span></a>
+    
+    <div class="auth-nav" id="auth-nav">
+      <a href="/login.html" class="nav-login">Log in</a>
+      <a href="/register.html" class="nav-register">Get started</a>
+    </div>
+
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR CAMPUS, YOUR COMMUNITY</div>
+        <h1>Make your next<br />big thing <span>happen.</span></h1>
+        <p>
+          Discover workshops, meet curious minds, and learn something
+          extraordinary. Your next opportunity is waiting.
+        </p>
+        <a href="#events" class="primary-button">
+          Explore workshops <span>↓</span>
+        </a>
+
+        <div class="hero-note">
+          <span class="sparkle">✳</span>
+          Learn something new. Meet someone inspiring.
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-card art-card-main">
+          <div class="art-card-top">
+            <span class="art-mini-label">YOUR NEXT CHAPTER</span>
+            <span class="art-sparkle">✦</span>
+          </div>
+          <div class="art-illustration">
+            <div class="art-sun"></div>
+            <div class="art-shape shape-back"></div>
+            <div class="art-shape shape-front"></div>
+            <div class="art-book">✧</div>
+          </div>
+          <div class="art-card-bottom">
+            <div>
+              <strong>Curiosity looks good on you.</strong>
+              <p>Explore. Create. Connect.</p>
+            </div>
+            <span class="art-arrow">↗</span>
+          </div>
+        </div>
+        <div class="floating-tag tag-top">✦ &nbsp; New skills</div>
+        <div class="floating-tag tag-bottom">♡ &nbsp; Your people</div>
+        <span class="decor decor-one">✳</span>
+        <span class="decor decor-two">✦</span>
+      </div>
+    </section>
+
+    <section class="events-section" id="events">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow section-eyebrow">FIND YOUR NEXT EXPERIENCE</div>
+          <h2>Events worth showing up for<span>.</span></h2>
+          <p class="section-description">
+            Good people, fresh ideas, and skills you'll take beyond campus.
+          </p>
+        </div>
+        <div class="event-count" id="event-count">Loading events…</div>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search workshops, topics..."
+            aria-label="Search events"
+          />
+          <kbd>/</kbd>
+        </label>
+
+        <label class="category-select-label">
+          <span class="sr-only">Filter by category</span>
+          <select id="category-filter">
+            <option value="all">All categories</option>
+          </select>
+        </label>
+
+        <label class="sort-select-label">
+          <span class="sr-only">Sort events</span>
+          <select id="sort-filter">
+            <option value="date">Soonest first</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="seats">Most seats available</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="event-status" class="status-message" role="status" aria-live="polite">
+        Loading workshops from the server…
+      </div>
+
+      <div class="event-grid" id="event-grid"></div>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <div class="empty-icon">⌕</div>
+        <h3>No events found</h3>
+        <p>Try another search or select a different category.</p>
+        <button type="button" class="secondary-button" id="clear-filters">
+          Clear filters
+        </button>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="how-heading">
+        <div class="eyebrow">YOUR NEXT EXPERIENCE, MADE EASY</div>
+        <h2>Three steps to something new<span>.</span></h2>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <div class="step-icon">⌕</div>
+          <h3>Find your thing</h3>
+          <p>Explore workshops that match your interests and curiosity.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <div class="step-icon">✦</div>
+          <h3>Save your spot</h3>
+          <p>Check event details, pricing, and remaining seat availability.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <div class="step-icon">♡</div>
+          <h3>Show up and grow</h3>
+          <p>Learn with your campus community and take the next step.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="/">
+      <span class="brand-icon">C</span>
+      <span>Campus<span class="brand-accent">Connect</span></span>
+    </a>
+    <p>Made for curious minds. Built for campus life.</p>
+    <span class="footer-copy">© <span id="current-year"></span> CampusConnect</span>
+  </footer>
+</body>
+</html>

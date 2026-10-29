@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard | CampusConnect</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/auth.css" />
+  <script src="/student.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/">
+      <span class="brand-icon">C</span>
+      <span>Campus<span class="brand-accent">Connect</span></span>
+    </a>
+    <nav class="nav-links">
+      <a class="nav-link active" href="#workshops">Workshops</a>
+      <a class="nav-link" href="#my-bookings">My bookings</a>
+    </nav>
+    <button class="nav-cta" id="logout-button" type="button">Log out ↗</button>
+  </header>
+
+  <main class="events-section">
+    <div class="eyebrow">YOUR CAMPUS JOURNEY</div>
+    <h1 style="font-size:clamp(30px,4vw,44px);margin:12px 0">
+      Hey, <span id="student-name">student</span>! 💜
+    </h1>
+    <p class="section-description">
+      Find a workshop, reserve your seat, and make something happen.
+    </p>
+
+    <div id="dashboard-message" class="status-message" role="status"></div>
+
+    <section id="my-bookings" style="margin-top:42px">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">YOUR PLANS</div>
+          <h2>My bookings<span>.</span></h2>
+          <p class="section-description">Your registered workshops in one place.</p>
+        </div>
+        <span class="event-count" id="booking-count">0 bookings</span>
+      </div>
+      <div class="event-grid" id="booking-grid" style="margin-top:24px"></div>
+      <p id="no-bookings" class="status-message">
+        You haven't booked a workshop yet. Explore the events below!
+      </p>
+    </section>
+
+    <section id="workshops" style="margin-top:60px">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">DISCOVER SOMETHING NEW</div>
+          <h2>Explore workshops<span>.</span></h2>
+          <p class="section-description">Choose your next learning experience.</p>
+        </div>
+        <span class="event-count" id="workshop-count">Loading…</span>
+      </div>
+      <div class="event-grid" id="workshop-grid" style="margin-top:24px"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="/">
+      <span class="brand-icon">C</span>
+      <span>Campus<span class="brand-accent">Connect</span></span>
+    </a>
+    <p>Made for curious minds. Built for campus life.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account | CampusConnect</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/auth.css" />
+  <script src="/auth.js" defer></script>
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <aside class="auth-visual">
+      <a class="auth-brand" href="/">
+        <span class="auth-brand-icon">C</span>
+        <span>CampusConnect</span>
+      </a>
+
+      <div class="auth-visual-copy">
+        <div class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</div>
+        <h1>Curiosity looks <span>good on you.</span></h1>
+        <p>
+          Find your people, explore exciting workshops, and turn
+          what you learn into something extraordinary.
+        </p>
+      </div>
+
+      <div class="auth-visual-footer">
+        Made for curious minds. Built for campus life.
+      </div>
+    </aside>
+
+    <section class="auth-panel">
+      <div class="auth-form-wrap">
+        <a class="auth-mobile-brand" href="/">CampusConnect ✦</a>
+
+        <p class="auth-kicker">JOIN THE COMMUNITY</p>
+        <h2>Create your account</h2>
+        <p class="auth-subtitle">
+          One account, a whole campus of opportunities.
+        </p>
+
+        <div id="auth-message" class="auth-message"
+          role="status" aria-live="polite"></div>
+
+        <form id="register-form" class="auth-form">
+          <div class="auth-field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text"
+              placeholder="Your full name" autocomplete="name"
+              minlength="2" maxlength="80" required />
+          </div>
+
+          <div class="auth-field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email"
+              placeholder="you@example.com" autocomplete="email"
+              maxlength="254" required />
+          </div>
+
+          <div class="auth-field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password"
+              placeholder="At least 8 characters"
+              autocomplete="new-password"
+              minlength="8" maxlength="128" required />
+            <span class="auth-help">
+              Use at least 8 characters.
+            </span>
+          </div>
+
+          <div class="auth-field">
+            <label for="confirm-password">Confirm password</label>
+            <input id="confirm-password" name="confirmPassword"
+              type="password" placeholder="Enter your password again"
+              autocomplete="new-password"
+              minlength="8" maxlength="128" required />
+          </div>
+
+          <button class="auth-submit" type="submit">
+            Create account <span>↗</span>
+          </button>
+        </form>
+
+        <p class="auth-switch">
+          Already have an account? <a href="/login.html">Sign in</a>
+        </p>
+
+        <a class="auth-back" href="/">← Back to explore events</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

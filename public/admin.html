@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | CampusConnect</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/auth.css" />
+  <script src="/admin.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/">
+      <span class="brand-icon">C</span>
+      <span>Campus<span class="brand-accent">Connect</span></span>
+    </a>
+    <nav class="nav-links">
+      <a class="nav-link active" href="#admin-events">Manage events</a>
+      <a class="nav-link" href="#create-event">Create workshop</a>
+    </nav>
+    <button class="nav-cta" id="admin-logout" type="button">Log out ↗</button>
+  </header>
+
+  <main class="events-section">
+    <div class="eyebrow">ADMINISTRATION</div>
+    <h1 style="font-size:clamp(30px,4vw,44px);margin:12px 0">
+      Workshop control centre<span style="color:#7047eb">.</span>
+    </h1>
+    <p class="section-description">
+      Manage campus workshops, monitor bookings, and review attendees.
+    </p>
+
+    <div id="admin-message" class="status-message" role="status"></div>
+
+    <div class="steps-grid" style="margin:30px 0">
+      <article class="step-card">
+        <div class="eyebrow">TOTAL WORKSHOPS</div>
+        <h2 id="total-events">—</h2>
+      </article>
+      <article class="step-card">
+        <div class="eyebrow">TOTAL REGISTRATIONS</div>
+        <h2 id="total-registrations">—</h2>
+      </article>
+    </div>
+
+    <section id="create-event" style="margin-bottom:55px">
+      <div class="eyebrow">EVENT MANAGEMENT</div>
+      <h2 id="form-heading">Create a workshop</h2>
+
+      <form id="event-form" class="auth-form"
+        style="max-width:700px;margin-top:22px">
+        <input type="hidden" id="event-id" />
+
+        <div class="auth-field">
+          <label for="title">Workshop title</label>
+          <input id="title" required maxlength="150" />
+        </div>
+
+        <div class="auth-field">
+          <label for="description">Description</label>
+          <textarea id="description" required maxlength="2000"
+            rows="3" style="padding:12px;border:1px solid #e6e0f2;border-radius:10px;font:inherit"></textarea>
+        </div>
+
+        <div class="auth-field">
+          <label for="category">Category</label>
+          <input id="category" required maxlength="80" />
+        </div>
+
+        <div class="auth-field">
+          <label for="event-date">Date and time</label>
+          <input id="event-date" type="datetime-local" required />
+        </div>
+
+        <div class="auth-field">
+          <label for="venue">Venue</label>
+          <input id="venue" required maxlength="200" />
+        </div>
+
+        <div class="auth-field">
+          <label for="price">Price (₹)</label>
+          <input id="price" type="number" min="0" step="0.01" required />
+        </div>
+
+        <div class="auth-field">
+          <label for="capacity">Seat capacity</label>
+          <input id="capacity" type="number" min="1" step="1" required />
+        </div>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="auth-submit" id="save-event" type="submit"
+            style="width:auto;min-width:170px">
+            Create workshop
+          </button>
+          <button class="secondary-button" id="reset-form" type="button">
+            Clear form
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section id="admin-events">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">YOUR CAMPUS PROGRAMME</div>
+          <h2>Manage workshops<span>.</span></h2>
+        </div>
+        <span class="event-count" id="admin-event-count">Loading…</span>
+      </div>
+      <div class="event-grid" id="admin-event-grid" style="margin-top:24px"></div>
+    </section>
+
+    <section id="attendee-section" hidden style="margin-top:55px">
+      <div class="eyebrow">REGISTRATION LIST</div>
+      <h2 id="attendee-heading">Workshop attendees</h2>
+      <div id="attendee-list" style="overflow-x:auto"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="/">
+      <span class="brand-icon">C</span>
+      <span>Campus<span class="brand-accent">Connect</span></span>
+    </a>
+    <p>Admin workspace · CampusConnect</p>
+  </footer>
+</body>
+</html>
