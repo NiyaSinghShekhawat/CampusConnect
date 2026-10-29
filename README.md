@@ -137,7 +137,7 @@ Before deploying:
 
 **Niya Singh | L. Hasini Reddy**
 
-GitHub: [Niya Singh](https://github.com/YOUR-USERNAME)
+GitHub: [Niya Singh](https://github.com/NiyaSinghShekhawat)
 
 ---
 
